@@ -22,5 +22,12 @@
   "devDependencies": {
     "electron": "^6.0.7"
   },
-  "dependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/emoji-essential.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/emoji-essential/issues"
+  },
+  "homepage": "https://github.com/WebReflection/emoji-essential#readme"
 }
