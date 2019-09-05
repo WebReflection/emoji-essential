@@ -4,11 +4,12 @@
   "description": "An emoji dictionary directly from https://unicode.org/",
   "main": "cjs/index.js",
   "module": "esm/index.js",
-  "unpkg": "index.js",
+  "unpkg": "min.js",
   "scripts": {
-    "build": "electron build.js && npm run cjs && npm run esm && npm test",
+    "build": "electron build.js && npm run cjs && npm run esm && npm run min && npm test",
     "cjs": "cp index.js cjs/index.js && echo 'module.exports = emojiEssential;' >> cjs/index.js",
     "esm": "cp index.js esm/index.js && echo 'export default emojiEssential;' >> esm/index.js",
+    "min": "uglifyjs index.js -o min.js",
     "test": "node -e 'require(`.`).Activities.event[`🎉`] == `party popper` || process.exit(1)'"
   },
   "keywords": [
@@ -20,7 +21,8 @@
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^6.0.7"
+    "electron": "^6.0.7",
+    "uglify-js": "^3.6.0"
   },
   "repository": {
     "type": "git",
