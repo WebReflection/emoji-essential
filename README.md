@@ -8,6 +8,8 @@ The dictionary contains groups as main key, sub group per each main key, and fin
 
 Suitable for most common emoji related operations/projects.
 
+[See the dictionary](https://unpkg.com/emoji-essential@0.1.2/index.js) via [unpkg CDN](https://unpkg.com/).
+
 ```js
 import emojiEssential from 'emoji-essential';
 // or
