@@ -43,3 +43,26 @@ Object.keys(ee).forEach(group => {
 name2emoji[':party_popper:']; // 🎉
 name2emoji['🎉']; // :party_popper:
 ```
+
+#### grouped by main type
+
+Useful for emoji UI pickers.
+
+```js
+const ee = require('emoji-essential');
+const ee = require('.');
+const emoji = {};
+Object.keys(ee).forEach(group => {
+  emoji[group] = {
+    glyph: [],
+    description: []
+  };
+  Object.keys(ee[group]).forEach(sub => {
+    Object.keys(ee[group][sub]).forEach(key => {
+      emoji[group].glyph.push(key);
+      emoji[group].description.push(ee[group][sub][key]);
+    });
+  });
+});
+```
+
