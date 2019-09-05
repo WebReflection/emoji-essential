@@ -1,0 +1,26 @@
+{
+  "name": "emoji-essential",
+  "version": "0.0.0",
+  "description": "An emoji dictionary directly from https://unicode.org/",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "unpkg": "index.js",
+  "scripts": {
+    "build": "electron build.js && npm run cjs && npm run esm && npm test",
+    "cjs": "cp index.js cjs/index.js && echo 'module.exports = emojiEssential;' >> cjs/index.js",
+    "esm": "cp index.js esm/index.js && echo 'export default emojiEssential;' >> esm/index.js",
+    "test": "node -e 'require(`.`).Activities.event[`🎉`] == `party popper` || process.exit(1)'"
+  },
+  "keywords": [
+    "emoji",
+    "name",
+    "description",
+    "unicode"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^6.0.7"
+  },
+  "dependencies": {}
+}
