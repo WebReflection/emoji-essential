@@ -1,5 +1,7 @@
 # emoji-essential
 
+<sup>**Social Media Photo by [Fausto García](https://unsplash.com/@faustogarmen) on [Unsplash](https://unsplash.com/)**</sup>
+
 An emoji dictionary directly from https://unicode.org/ updated through automation on each unicode release.
 
 The dictionary contains groups as main key, sub group per each main key, and finally an emoji > short name key/value pair.
