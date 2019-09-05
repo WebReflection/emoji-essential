@@ -6,7 +6,7 @@ An emoji dictionary directly from https://unicode.org/ updated through automatio
 
 The dictionary contains groups as main key, sub group per each main key, and finally an emoji > short name key/value pair.
 
-Suitable for most common emoji related operations.
+Suitable for most common emoji related operations/projects.
 
 ```js
 import emojiEssential from 'emoji-essential';
