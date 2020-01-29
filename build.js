@@ -8,10 +8,10 @@ app.on('ready', () => {
     images: false,
     webgl: false
   });
+  console.log('loading the page');
   win.loadURL('https://unicode.org/emoji/charts/full-emoji-list.html');
-  console.log('please wait');
   win.webContents.on('did-finish-load', () => {
-    console.log('page loaded, please wait');
+    console.log('parsing the content');
     win.webContents.executeJavaScript(
       `(() => {
         const emoji = {};
@@ -50,7 +50,7 @@ app.on('ready', () => {
       })()`
     ).then(
       emoji => {
-        console.log('writing file, please wait');
+        console.log('stringifying results');
         fs.writeFile(
           'index.js',
           `var emojiEssential = ${JSON.stringify(emoji, null, '  ')};\n`,
@@ -59,7 +59,7 @@ app.on('ready', () => {
               console.error(err);
               process.exit(1);
             }
-            console.log('closing browser');
+            console.log('closing the browser');
             win.close();
           }
         );
