@@ -21,7 +21,7 @@
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^7.1.10",
+    "electron": "^7.1.11",
     "uglify-js": "^3.7.6"
   },
   "repository": {
