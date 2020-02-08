@@ -1,6 +1,6 @@
 {
   "name": "emoji-essential",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "An emoji dictionary directly from https://unicode.org/",
   "main": "cjs/index.js",
   "module": "esm/index.js",
